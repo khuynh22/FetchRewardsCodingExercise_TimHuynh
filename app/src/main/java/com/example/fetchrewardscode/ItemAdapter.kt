@@ -16,9 +16,9 @@ class ItemAdapter(private val itemsMap: Map<Int, List<String>>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
-        // Inflate the item layout XML and create a ViewHolder
+        // Use !! to assert that parent is not null
         val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
+            LayoutInflater.from(parent!!.context).inflate(R.layout.item_layout, parent, false)
         return CustomViewHolder(itemView)
     }
 
